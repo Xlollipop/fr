@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blind Food Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg, #1f1f32, #3b3b58);
+            color: #fff;
+            line-height: 1.6;
+            transition: opacity 0.7s ease-in-out;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            color:  #ffffff ;
+            text-shadow:0 5px 15px rgba(255, 255, 255, 1.5) ;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 2.5);
+        }
+
+        nav {
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: #ffcc00;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff5733;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 20px;
+            height: 1000PX;
+        }
+
+        .text-container {
+            width: 50%;
+        }
+
+        .image-container {
+            width: 45%;
+            text-align: right;
+        }
+
+        .image-container img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        h1, h2 {
+            color: #ffcc00;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 22px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 15px;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #bbb;
+        }
+        .animated-link {
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(90deg, #ffcc00, #ff5733);
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .animated-link:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(255, 87, 51, 0.5);
+        }
+
+        .animated-link::before {
+            content: '';
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            top: 50%;
+            left: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.4s ease-in-out;
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+        }
+
+        .animated-link:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+        .fade-out {
+            opacity: 0;
+        }
+        #k{
+            color:  #1e1e2f;
+            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.5);
+            background: linear-gradient(90deg, #ffcc00, #ff5733);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        KOUL-UP <br> Blind Food Challenge
+    </header>
+    
+    <section>
+        <div class="text-container">
+            <h2>Introduction</h2>
+                <p>Bonjour à tous, aujourd'hui, je vais vous présenter un événement unique qui va réunir passion, 
+                    divertissement et solidarité : <br> <strong id="k">le KOUL-UP Blind Food Challenge</strong>.
+                    <br> Cet événement est le fruit d'une collaboration entre <strong id="k">TEK-UP</strong>, 
+                     notre université, et <strong id="k">Koul Time</strong>, une chaîne YouTube animée par Saif et Malek, 
+                     deux passionnés de gastronomie qui parcourent la Tunisie pour découvrir et tester différents plats.</p>
+                    <br>
+                    <a href="index.html" class="animated-link">Go to KOUL TIME</a>
+                
+                <script>
+                    document.addEventListener("DOMContentLoaded", () => {
+                        const links = document.querySelectorAll(".animated-link");
+                        links.forEach(link => {
+                            link.addEventListener("click", (e) => {
+                                e.preventDefault();
+                                document.body.classList.add("fade-out");
+                                setTimeout(() => {
+                                    window.location.href = link.href;
+                                }, 700);
+                            });
+                        });
+                    });
+                </script>
+                <center><br><a href="#concept"> Next</a></center>
+            </div>
+        <div class="image-container">
+            <img src="3.png" alt="Blind Food Challenge Image">
+        </div>
+    </section>
+    
+
+    <section  id="concept">
+        <div class="text-container">
+            <h2>Objectifs et Concept</h2>
+                <p> <strong id="k">le KOUL-UP Blind Food Challenge</strong> est un défi culinaire où les participants devront déguster des plats les yeux bandés et tenter de deviner les ingrédients ou le nom du plat. 
+                    Cet événement a été conçu non seulement pour offrir un moment de convivialité et d'amusement, 
+                    mais aussi pour servir une cause noble. 
+                    Il permettra de sensibiliser les participants aux différentes saveurs et spécialités culinaires tunisiennes tout en créant une atmosphère de compétition amicale.</p>
+                    <center><br><a href="#deroulement"> Next</a></center>
+            </div>
+                <div class="image-container">
+               <img src="concept.jfif" alt="Concept Image">
+        </div>
+    </section>
+
+
+
+    <section id="deroulement">
+        <div class="text-container">
+            <h2>Déroulement de l'Événement</h2>
+                <p>L'événement se déroulera à <strong id="k">TEK-UP</strong>, 
+                    dans le grand amphithéâtre de l'université,<br>
+                    un espace pouvant accueillir un large public pour assurer une ambiance dynamique et interactive.
+                     Il aura lieu <strong id="k">le 5 avril 2025</strong>, une date choisie en plein mois de <strong id="k">Ramadan</strong>,
+                      afin que l'événement puisse se dérouler dans un cadre festif après <strong id="k">l'iftar</strong>.
+                       Ainsi, le challenge commencera <strong id="k">à 21h00</strong> et se poursuivra jusqu'à minuit,
+                        permettant aux participants et spectateurs de profiter pleinement de l'expérience sans contrainte de jeûne.
+        Les participants, sélectionnés parmi les étudiants et les créateurs de contenu de <strong id="k">Koul Time</strong>, 
+        seront invités à monter sur scène, où ils seront équipés de bandeaux pour les yeux.
+         Ils devront goûter une série de plats soigneusement préparés et tenter d’identifier 
+         les ingrédients ou le nom du plat en fonction de leurs saveurs et textures. 
+         Le public, quant à lui, pourra réagir en direct et encourager les participants, 
+         rendant l’expérience encore plus immersive et divertissante.</p>
+         <center><br><a href="#collecte"> Next</a></center>
+    </div>
+        <div class="image-container">
+            <img src="TEK-UP.png" alt="TEK-UP">
+            <video src="" autoplay muted loop></video>
+        </div>
+    </section>
+    
+
+    <section id="collecte">
+        <div class="text-container">
+           <h2>Collecte de Fonds et Impact</h2>
+                <p>L'une des particularités de cet événement sera la mise en place d'un site web permettant de collecter des dons en ligne via <strong id="k">Ba9chich</strong>.
+                   Grâce à la générosité des participants et au soutien de nos sponsors, 
+                   nous espérons réunir une somme importante qui sera entièrement reversée à une cause caritative.
+                   En effet, les fonds collectés seront dédiés aux <strong id="k">enfants dans le besoin</strong> ,<br><br> 
+                   afin de leur offrir une <strong id="k">Eid Al-Fitr mémorable</strong>. <br> Après le mois sacré de Ramadan,
+                   Eid Al-Fitr est un moment de joie et de partage, mais malheureusement , de nombreux enfants issus de familles défavorisées ne peuvent pas en profiter pleinement.
+                   <br>Grâce à cette initiative, nous leur achèterons <strong id="k">des vêtements neufs, des jouets et des cadeaux</strong>,
+                   leur permettant ainsi de ressentir pleinement l'ambiance festive de l’Aïd, comme tous les autres enfants.</p>
+                   <center><br><a href="#contact"> Next</a></center> </div>
+            <div class="image-container">
+            <img src="6-charity-donation.jpg" alt="Charity Image">
+        </div>
+    </section>
+    
+
+
+    <section id="contact">
+        <div class="text-container">
+            <h2>Contact</h2>
+                <p>Nous remercions par avance tous les participants, l'équipe de <br><strong id="k">Koul Time</strong> ,
+                les sponsors et toutes les personnes impliquées dans l'organisation de cet événement.
+                Grâce à vous, <br> ce <strong id="k">Blind Food Challenge </strong>ne sera pas seulement une compétition culinaire,
+                mais aussi une véritable action solidaire qui apportera du bonheur à des enfants dans le besoin.
+                Nous espérons que cette initiative sera une réussite et ouvrira la voie à d'autres projets similaires à l'avenir.</p>
+                <br><center><p><strong id="k">Merci pour votre attention et votre soutien !</strong></p>
+                <br><p>Pour plus d'informations, contactez-nous à <a href="mailto:contact@blindfoodchallenge.com">contact@blindfoodchallenge.com</a>.</p></center>
+        </div>
+        <div class="image-container">
+            <img src="CREE.png" alt="support">
+        </div>
+    </section>
+    
+
+
+    <footer>
+        &copy; 2025 Blind Food Challenge - Tous droits réservés.
+    </footer>
+</body>
+</html>

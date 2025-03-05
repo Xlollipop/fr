@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koul-Up Charity Challenge 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Video Background Styles */
+        .video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+            filter: brightness(0.5);
+        }
+
+        .content-overlay {
+            position: relative;
+            min-height: 100vh;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        /* Countdown Styles */
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .time-box {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            min-width: 120px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Koul Times Section */
+        .youtubers-section {
+            margin: 3rem 0;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1rem;
+            border-radius: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 3px solid white;
+            object-fit: cover;
+        }
+
+        /* YouTube Icon Animation */
+        .youtube-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            animation: youtubeShake 4s infinite;
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+            z-index: 1000;
+        }
+
+        @keyframes youtubeShake {
+            0% { transform: rotate(0deg); }
+            30% { transform: rotate(30deg); }
+            45% { transform: rotate(30deg); }
+            60% { transform: rotate(-30deg); }
+            75% { transform: rotate(-30deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        /* Event Info */
+        .event-info {
+            margin-top: 3rem;
+            background: rgba(0,0,0,0.2);
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .donate-button {
+            background: #ffd93d;
+            color: #2d3436;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .donate-button:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .time-box {
+                min-width: 80px;
+                padding: 1rem;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="video-background">
+        <source src="introx.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <!-- YouTube Icon -->
+    <svg class="youtube-icon" viewBox="0 0 24 24" fill="silver">
+        <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+    </svg>
+
+    <div class="content-overlay">
+        <div class="container">
+
+            <h1>Koul-Up Charity Challenge 2025</h1>
+
+            <!-- Kool Times Section -->
+            <div class="youtubers-section">
+                <h2>Featuring Kool Times! 🎬</h2><br>
+                <div class="profile-section">
+                    <img src="time.jpg" alt="Saif & Malek" class="profile-image">
+                    <div>
+                        <h3>SAIF & MALEK</h3><br>
+                        <p>Creators of Koul Times</p><br>
+                        <p style="color: #ffd93d; margin-top: 0.5rem;">"Yo Koul Timer's!" 👋
+                        Koul Time est une chaîne YouTube tunisienne populaire spécialisée dans les critiques culinaires,
+                        les défis et les vlogs, offrant aux spectateurs une immersion authentique dans la cuisine et la culture tunisiennes.
+                        En mars 2025, la chaîne compte environ 169 000 abonnés et propose plus de 177 vidéos.</p>
+                        <button class="donate-button">Support the Cause 💖</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Info -->
+            <div class="event-info">
+                <h2>🎉 Blindfold Food Challenge for Charity 🍔</h2>
+                <p>📍 University TEK-UP</p>
+                <p>🗓 Date: 23 September 2025</p>
+                <p>⏰ Time: 4:00 PM Onwards</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
